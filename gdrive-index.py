@@ -71,7 +71,7 @@ def generateDirArray(dirToScan):
         d = 0
         for dir in dirs:
             d = d + 1
-            print(currentDir + '/' + dir + '/')
+            # print(currentDir + '/' + dir + '/')
             print(str(d)+'/'+str(len(dirs)) + ' - ' + dir)
             numDirs = numDirs + 1
             dirLinks = dirLinks + str(dirIDsDictionary[currentDir+'/'+dir]) + '*'
