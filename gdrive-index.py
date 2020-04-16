@@ -68,11 +68,11 @@ def generateDirArray(dirToScan):
         # create the list of directory IDs correspondent to the subdirs present on the current directory
         # this acts as a list of links to the subdirectories on the javascript code
         dirLinks = ''
-        d = 0
+        d_count = 0
         for dir in dirs:
-            d = d + 1
+            d_count = d_count + 1
             # print(currentDir + '/' + dir + '/')
-            print(str(d)+'/'+str(len(dirs)) + ' - ' + dir)
+            print(str(d_count)+'/'+str(len(dirs)) + ' - ' + dir)
             numDirs = numDirs + 1
             dirLinks = dirLinks + str(dirIDsDictionary[currentDir+'/'+dir]) + '*'
         dirLinks = dirLinks[:-1]    # remove last *
@@ -99,7 +99,7 @@ def generateDirArray(dirToScan):
             # print('g')
             print('d', d)
             print('g', g)
-            print('allDirArray', allDirArray)
+            print('allDirArray', len(allDirArray))
             if type(allDirArray[d][g]) == int:
                 dirData=dirData+str(allDirArray[d][g])+",\n"
             else:
