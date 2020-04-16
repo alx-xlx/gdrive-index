@@ -29,6 +29,7 @@ def generateDirArray(dirToScan):
     dirIDsDictionary[dirToScan] = 0
     for currentDir, dirs, files in os.walk(dirToScan):
         for dir in dirs:
+            print(i+'/'+len(dirs))
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
 
