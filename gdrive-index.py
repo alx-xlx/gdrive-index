@@ -32,7 +32,7 @@ def generateDirArray(dirToScan):
         for dir in dirs:
             j = j + 1
             print(str(j)+'/'+str(len(dirs)) + ' - ' + dir)
-            sys.stdout.write('\x1b[1A')
+            # sys.stdout.write('\x1b[1A')
             # sys.stdout.write('\x1b[2K')
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
@@ -80,7 +80,7 @@ def generateDirArray(dirToScan):
         dirLinks = dirLinks[:-1]    # remove last *
         currentDirArray.append(dirLinks)
         allDirArray[currentDirId]=currentDirArray   # store currentDirArray on the correspondent position of allDirArray
-
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     # from allDirArray, generate the text to replace [DIR DATA] on HTML file
     #
