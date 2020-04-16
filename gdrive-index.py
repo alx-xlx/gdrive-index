@@ -94,7 +94,7 @@ def generateDirArray(dirToScan):
 
 def generateHTML(dirData,appName,appVer,genDate,genTime,title,appLink,numFiles,numDirs,grandTotalSize,linkFiles):
     templateFile = open('gdrive-index/template.html', 'r')
-    outputFile = open(title+'.html', 'w')
+    outputFile = open(title, 'w')
     for line in templateFile:
         modifiedLine = line
         modifiedLine = modifiedLine.replace('[DIR DATA]', dirData)
