@@ -80,7 +80,7 @@ def generateDirArray(dirToScan):
         dirLinks = dirLinks[:-1]    # remove last *
         currentDirArray.append(dirLinks)
         allDirArray[currentDirId]=currentDirArray   # store currentDirArray on the correspondent position of allDirArray
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('clear')
 
     # from allDirArray, generate the text to replace [DIR DATA] on HTML file
     #
