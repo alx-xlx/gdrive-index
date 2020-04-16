@@ -99,9 +99,9 @@ def generateDirArray(dirToScan):
         dirData = dirData + "dirs[" + str(d) + "] = [\n"
         for g in range(len(allDirArray[d])):
             # print('g')
-            print('d', d)
-            print('g', g)
-            print('allDirArray', len(allDirArray))
+            # print('d', d)
+            # print('g', g)
+            # print('allDirArray', len(allDirArray))
             if type(allDirArray[d][g]) == int:
                 dirData=dirData+str(allDirArray[d][g])+",\n"
             else:
