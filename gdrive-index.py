@@ -28,8 +28,10 @@ def generateDirArray(dirToScan):
     dirIDsDictionary = {}
     dirIDsDictionary[dirToScan] = 0
     for currentDir, dirs, files in os.walk(dirToScan):
+        j = 0
         for dir in dirs:
-            print(str(i)+'/'+str(len(dirs)) + ' - ' + dir)
+            j = j + 1
+            print(str(j)+'/'+str(len(dirs)) + ' - ' + dir)
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
 
@@ -42,7 +44,7 @@ def generateDirArray(dirToScan):
     # traverse the directory tree     
     for currentDir, dirs, files in os.walk(dirToScan):
         count = count + 1
-        print('count', count)
+        print('Current Folder', currentDir)
         currentDirId = dirIDsDictionary[currentDir]
         currentDirArray = []  # array to hold all current dir data
         currentDirModifiedTime = datetime.datetime.fromtimestamp(os.path.getmtime(currentDir))
@@ -50,8 +52,11 @@ def generateDirArray(dirToScan):
         currentDirFixed = currentDir.replace("/","\\\\")    # replace / with \\ in the dir path (necessary for javascript functions to work properly
         currentDirArray.append(currentDirFixed+'*0*'+currentDirModifiedTime)   # append directory info to currentDirArray 
         totalSize = 0
+        f = 0
         for file in files:
-            print(currentDir + '/' + file)
+            f = f + 1
+            # print(currentDir + '/' + file)
+            print(str(f)+'/'+str(len(files)) + ' - ' + file)
             numFiles = numFiles + 1
             fileSize = getsize(currentDir+'/'+file)
             totalSize = totalSize + fileSize
@@ -63,8 +68,11 @@ def generateDirArray(dirToScan):
         # create the list of directory IDs correspondent to the subdirs present on the current directory
         # this acts as a list of links to the subdirectories on the javascript code
         dirLinks = ''
+        d = 0
         for dir in dirs:
+            d = d + 1
             print(currentDir + '/' + dir + '/')
+            print(str(d)+'/'+str(len(dirs)) + ' - ' + dir)
             numDirs = numDirs + 1
             dirLinks = dirLinks + str(dirIDsDictionary[currentDir+'/'+dir]) + '*'
         dirLinks = dirLinks[:-1]    # remove last *
@@ -89,7 +97,9 @@ def generateDirArray(dirToScan):
         dirData = dirData + "dirs[" + str(d) + "] = [\n"
         for g in range(len(allDirArray[d])):
             # print('g')
-            print(d + ' | ' + g + ' | ' + allDirArray)
+            print('d', d)
+            print('g', g)
+            print('allDirArray', allDirArray)
             if type(allDirArray[d][g]) == int:
                 dirData=dirData+str(allDirArray[d][g])+",\n"
             else:
