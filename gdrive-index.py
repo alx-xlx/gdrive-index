@@ -33,7 +33,7 @@ def generateDirArray(dirToScan):
             j = j + 1
             print(str(j)+'/'+str(len(dirs)) + ' - ' + dir)
             sys.stdout.write('\x1b[1A')
-            sys.stdout.write('\x1b[2K')
+            # sys.stdout.write('\x1b[2K')
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
 
