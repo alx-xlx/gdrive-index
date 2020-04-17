@@ -2,7 +2,7 @@ import os
 import sys
 import datetime
 from os.path import getsize
-
+from IPython.display import clear_output
 
 # global variables definition
 appName = "gdrive-index"
@@ -29,14 +29,15 @@ def generateDirArray(dirToScan):
     dirIDsDictionary = {}
     dirIDsDictionary[dirToScan] = 0
     for currentDir, dirs, files in os.walk(dirToScan):
-        j = 0
+        # j = 0
         for dir in dirs:
-            j = j + 1
-            print(str(j)+'/'+str(len(dirs)) + ' - ' + dir)
+            # j = j + 1
+            # print(str(j)+'/'+str(len(dirs)) + ' - ' + dir)
             # sys.stdout.write('\x1b[1A')
             # sys.stdout.write('\x1b[2K')
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
+        print('Folder Scan Completed')
 
     # initilize array to hold all dir data, dimensioning it to hold the total number of dirs
     allDirArray=[]
@@ -46,6 +47,7 @@ def generateDirArray(dirToScan):
     count = 0
     # traverse the directory tree     
     for currentDir, dirs, files in os.walk(dirToScan):
+        clear_output(wait=True)
         count = count + 1
         print('Current Folder', currentDir)
         currentDirId = dirIDsDictionary[currentDir]
@@ -99,7 +101,7 @@ def generateDirArray(dirToScan):
     #   TOTAL_FILE_SIZE,
     #   "SUBDIRECTORY_ID*SUBDIRECTORY_ID*SUBDIRECTORY_ID*...",
     #   ];
-
+    print('Scanning Folder Tree Completed !!')
     for d in range(len(allDirArray)):
         # print('allDirArray')
         dirData = dirData + "dirs[" + str(d) + "] = [\n"
