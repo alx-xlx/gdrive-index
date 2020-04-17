@@ -2,7 +2,7 @@ import os
 import sys
 import datetime
 from os.path import getsize
-from google.colab import output
+
 
 # global variables definition
 appName = "gdrive-index"
@@ -66,7 +66,8 @@ def generateDirArray(dirToScan):
             fileModifiedTime = datetime.datetime.fromtimestamp(os.path.getmtime(currentDir+'/'+file))
             fileModifiedTime = fileModifiedTime.strftime("%d/%m/%Y %H:%M:%S")
             currentDirArray.append(file+'*'+str(fileSize)+'*'+fileModifiedTime)   # append file info to currentDirArray
-        print()
+        # print()
+
         currentDirArray.append(totalSize)   # append total file size to currentDirArray
         # create the list of directory IDs correspondent to the subdirs present on the current directory
         # this acts as a list of links to the subdirectories on the javascript code
@@ -79,11 +80,12 @@ def generateDirArray(dirToScan):
             numDirs = numDirs + 1
             dirLinks = dirLinks + str(dirIDsDictionary[currentDir+'/'+dir]) + '*'
         print(str(f)+'/'+str(len(files)) + ' | ' + str(d_count)+'/'+str(len(dirs)) + ' - ' + dir)
+        dir = None
         dirLinks = dirLinks[:-1]    # remove last *
         currentDirArray.append(dirLinks)
         allDirArray[currentDirId]=currentDirArray   # store currentDirArray on the correspondent position of allDirArray
         # os.system('clear')
-        output.clear()
+        # output.clear()
         
 
     # from allDirArray, generate the text to replace [DIR DATA] on HTML file
