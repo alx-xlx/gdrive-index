@@ -24,6 +24,12 @@ def generateDirArray(dirToScan):
     global numFiles
     global numDirs
     global grandTotalSize
+
+    # Template Input
+    global folder_to_index
+    folder_to_index = raw_input("Copy and paste the path of Folder you want to Index :    ")
+    print "Processing...."
+
     # assing a number identifier to each directory
     i = 1
     dirIDsDictionary = {}
