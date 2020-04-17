@@ -80,7 +80,7 @@ def generateDirArray(dirToScan):
             numDirs = numDirs + 1
             dirLinks = dirLinks + str(dirIDsDictionary[currentDir+'/'+dir]) + '*'
         print(str(f)+'/'+str(len(files)) + ' | ' + str(d_count)+'/'+str(len(dirs)) + ' - ' + dir)
-        dir = None
+        dir = ''
         dirLinks = dirLinks[:-1]    # remove last *
         currentDirArray.append(dirLinks)
         allDirArray[currentDirId]=currentDirArray   # store currentDirArray on the correspondent position of allDirArray
