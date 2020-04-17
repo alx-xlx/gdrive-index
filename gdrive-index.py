@@ -2,6 +2,7 @@ import os
 import sys
 import datetime
 from os.path import getsize
+from google.colab import output
 
 # global variables definition
 appName = "gdrive-index"
@@ -81,7 +82,9 @@ def generateDirArray(dirToScan):
         dirLinks = dirLinks[:-1]    # remove last *
         currentDirArray.append(dirLinks)
         allDirArray[currentDirId]=currentDirArray   # store currentDirArray on the correspondent position of allDirArray
-        os.system('clear')
+        # os.system('clear')
+        output.clear()
+        
 
     # from allDirArray, generate the text to replace [DIR DATA] on HTML file
     #
