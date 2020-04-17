@@ -37,7 +37,7 @@ def generateDirArray(dirToScan):
             # sys.stdout.write('\x1b[2K')
             dirIDsDictionary[currentDir+'/'+dir] = i
             i = i + 1
-        print('Folder Scan Completed')
+    print('Folder Scan Completed')
 
     # initilize array to hold all dir data, dimensioning it to hold the total number of dirs
     allDirArray=[]
