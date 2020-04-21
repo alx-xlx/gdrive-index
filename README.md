@@ -7,6 +7,12 @@ I created it because I needed to use Snap2HTML on Linux but didn't want to have 
 
 It's purpose is to create single page HTML+Javascript browsable lists of the contents of a given directory
 
+**example.html**
+
+**example.png**
+
+![](example.png)
+
 ## Usage
 
 <!-- Open in Colab in Center -->
