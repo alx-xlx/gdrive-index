@@ -11,8 +11,8 @@ genDate = datetime.datetime.now().strftime("%d/%m/%Y")
 genTime = datetime.datetime.now().strftime("%H:%M")
 appLink = "https://github.com/alx-xlx/gdrive-index"
 dirData = ""
-numFiles=0 
-numDirs=0 
+numFiles = 0 
+numDirs = 0 
 grandTotalSize=0
 linkFiles="false" # file linking not yet implemented
 
