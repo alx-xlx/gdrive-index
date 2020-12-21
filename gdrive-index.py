@@ -108,21 +108,22 @@ def generateDirArray(dirToScan):
     #   "SUBDIRECTORY_ID*SUBDIRECTORY_ID*SUBDIRECTORY_ID*...",
     #   ];
     print('Scanning Folder Tree Completed !!')
+    list_data = []
     for d in range(len(allDirArray)):
         # print('allDirArray')
-        dirData = dirData + "dirs[" + str(d) + "] = [\n"
+        list_data.append("dirs[" + str(d) + "] = [\n")
         for g in range(len(allDirArray[d])):
             # print('g')
             # print('d', d)
             # print('g', g)
             # print('allDirArray', len(allDirArray))
             if type(allDirArray[d][g]) == int:
-                dirData=dirData+str(allDirArray[d][g])+",\n"
+                list_data.append(str(allDirArray[d][g])+",\n")
             else:
-                dirData=dirData+'"'+allDirArray[d][g]+'",\n'
-        dirData=dirData+"];\n"
-        dirData=dirData+"\n"
-
+                list_data.append('"'+allDirArray[d][g]+'",\n')
+        list_data.append("];\n")
+        list_data.append("\n")
+    dirData += ''.join(list_data)
     return 
 
 
