@@ -1,3 +1,19 @@
+
+<div align="center">
+<img src="https://i.imgur.com/XYChjKr.png" alt="gdrive-index" height="">
+gdrive-index
+</div>
+ <div align="center">
+ <img alt="gdrive-index-license" src="https://img.shields.io/badge/Open_source-MIT-red.svg?logo=git&logoColor=green"/>
+<img src="https://img.shields.io/github/last-commit/alx-xlx/gdrive-index.svg?logo=Sublime+Text&logoColor=green&label=Active"/>
+<img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/alx-xlx/gdrive-index">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alx-xlx/gdrive-index">
+<img alt="gdrive-index-softwareheritage.org" src="https://archive.softwareheritage.org/badge/origin/https://github.com/Unipisa/CMM/"/>
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alx-xlx/gdrive-index">
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falx-xlx%2Fgdrive-index&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+
+</div>
+ 
 # GDrive-Index
 
 It is a multiplatform CLI-only clone of [Snap2HTML](http://www.rlvision.com/snap2html/about.php).
