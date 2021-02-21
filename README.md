@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="https://i.imgur.com/XYChjKr.png" alt="gdrive-index" height="">
+<img src="https://i.imgur.com/H71y4Pp.png" alt="gdrive-index" height="">
 </div>
  <div align="center">
  <img alt="gdrive-index-license" src="https://img.shields.io/badge/Open_source-MIT-red.svg?logo=git&logoColor=green"/>
